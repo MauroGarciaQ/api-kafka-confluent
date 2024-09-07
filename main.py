@@ -84,12 +84,12 @@ consumer_conf = {
     'security.protocol': os.getenv('KAFKA_SECURITY_PROTOCOL'),
     'sasl.username': os.getenv('KAFKA_SASL_USERNAME'),
     'sasl.password': os.getenv('KAFKA_SASL_PASSWORD'),
-    'group.id': 'transactions_maurogarcia',
+    'group.id': 'transactions-group-1',
     'auto.offset.reset': 'earliest'
 }
 
 consumer = Consumer(consumer_conf)
-consumer.subscribe(['transactions_cristian_2'])
+consumer.subscribe(['transactions_maurogarcia'])
 
 # Función para consumir el mensaje desde Kafka
 async def consume_from_kafka():
